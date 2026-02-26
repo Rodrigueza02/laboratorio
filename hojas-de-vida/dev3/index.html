@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoja de Vida | Dev 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS exclusivo Dev 3 -->
+  <link rel="stylesheet" href="form.css">
+</head>
+<body class="dev3-body">
+
+  <main class="dev3-container">
+
+    <section class="profile">
+      <h1>Developer 3</h1>
+      <p>Rol: Frontend Developer</p>
+      <p>Formación: Ingeniería de Software</p>
+      <a href="#" target="_blank">Repositorio GitHub</a>
+    </section>
+
+    <section class="form-section">
+      <h2>Formulario de contacto</h2>
+
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input type="text" id="name">
+          <small class="error"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+          <small class="error"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea id="message"></textarea>
+          <small class="error"></small>
+        </div>
+
+        <button type="submit" id="submitBtn" disabled>
+          Enviar
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- JS exclusivo Dev 3 -->
+  <script src="form.js"></script>
+</body>
+</html>

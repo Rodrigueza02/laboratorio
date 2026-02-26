@@ -1,0 +1,59 @@
+.dev3-body {
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+  padding: 2rem;
+}
+
+.dev3-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.field {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input.invalid,
+textarea.invalid {
+  border-color: #ff385c;
+}
+
+input.valid,
+textarea.valid {
+  border-color: #4caf50;
+}
+
+.error {
+  color: #ff385c;
+  font-size: 0.8rem;
+  height: 1rem;
+}
+
+button {
+  padding: 0.7rem;
+  width: 100%;
+  border: none;
+  background: #ccc;
+  color: #fff;
+  border-radius: 6px;
+  cursor: not-allowed;
+}
+
+button.enabled {
+  background: #ff385c;
+  cursor: pointer;
+}
