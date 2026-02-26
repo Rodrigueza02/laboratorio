@@ -1,0 +1,39 @@
+.dev2-app {
+  font-family: Arial, sans-serif;
+}
+
+.dev2-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.dev2-navbar.dev2-scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.dev2-link {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.dev2-navbar.dev2-scrolled .dev2-link {
+  color: white;
+}
+
+.dev2-link.dev2-active {
+  border-bottom: 2px solid #2196F3;
+}
+
+.dev2-section {
+  min-height: 100vh;
+  padding: 120px 40px;
+}
