@@ -1,43 +1,39 @@
-.dev4-app {
+.dev2-app {
   font-family: Arial, sans-serif;
-  padding: 60px;
-  text-align: center;
 }
 
-.dev4-card {
-  margin: 40px auto;
-  padding: 40px;
-  width: 400px;
-  border-radius: 16px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  background: #ffffff;
+.dev2-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  transition: all 0.4s ease;
+  z-index: 1000;
 }
 
-.dev4-card:hover {
-  transform: translateY(-10px) rotateX(5deg);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+.dev2-navbar.dev2-scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-.dev4-btn {
-  position: relative;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
+.dev2-link {
+  text-decoration: none;
+  color: black;
   transition: 0.3s ease;
 }
 
-.dev4-btn:hover {
-  transform: scale(1.05);
+.dev2-navbar.dev2-scrolled .dev2-link {
+  color: white;
 }
 
-.dev4-btn::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background: rgba(255,255,255,0.6);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+.dev2-link.dev2-active {
+  border-bottom: 2px solid #2196F3;
+}
+
+.dev2-section {
+  min-height: 100vh;
+  padding: 120px 40px;
 }
