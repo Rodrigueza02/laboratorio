@@ -1,0 +1,63 @@
+/* ===============================
+   VARIABLES DE TEMA
+================================ */
+:root {
+  --bg-light: #f4f4f4;
+  --bg-dark: #121212;
+  --text-light: #222;
+  --text-dark: #f1f1f1;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+}
+
+/* ===============================
+   BASE
+================================ */
+.dev1-body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: all 0.4s ease;
+}
+
+/* ===============================
+   DARK MODE
+================================ */
+.dev1-body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dev1-body.dark .card {
+  background-color: var(--card-dark);
+}
+
+/* ===============================
+   COMPONENTES
+================================ */
+.dev1-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#toggleTheme {
+  padding: 0.6rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dev1-content {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: background-color 0.4s ease;
+}
