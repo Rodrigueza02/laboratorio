@@ -1,26 +1,36 @@
 (function () {
 
-  const buttons = document.querySelectorAll(".dev4-btn");
+  const navbar = document.querySelector(".dev2-navbar");
+  const links = document.querySelectorAll(".dev2-link");
+  const sections = document.querySelectorAll(".dev2-section");
 
-  buttons.forEach(button => {
-    button.addEventListener("click", function (e) {
-
-      const circle = document.createElement("span");
-      const diameter = Math.max(button.clientWidth, button.clientHeight);
-
-      circle.style.width = circle.style.height = `${diameter}px`;
-      circle.style.left = `${e.offsetX - diameter / 2}px`;
-      circle.style.top = `${e.offsetY - diameter / 2}px`;
-      circle.classList.add("dev4-ripple");
-
-      const ripple = button.getElementsByClassName("dev4-ripple")[0];
-
-      if (ripple) {
-        ripple.remove();
-      }
-
-      button.appendChild(circle);
-    });
+  // Navbar cambia al hacer scroll
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 80) {
+      navbar.classList.add("dev2-scrolled");
+    } else {
+      navbar.classList.remove("dev2-scrolled");
+    }
   });
+
+  // Detectar sección visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        links.forEach(link => link.classList.remove("dev2-active"));
+
+        const activeLink = document.querySelector(
+          `.dev2-link[href="#${entry.target.id}"]`
+        );
+
+        if (activeLink) {
+          activeLink.classList.add("dev2-active");
+        }
+      }
+    });
+  }, { threshold: 0.6 });
+
+  sections.forEach(section => observer.observe(section));
 
 })();
